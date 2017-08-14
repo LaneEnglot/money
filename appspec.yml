@@ -20,7 +20,7 @@ hooks:
       runas: root
       timeout: 300
 
-    - location: scripts/clean_env.sh
+    - location: scripts/clean_env_before_deploy.sh
       runas: root
       timeout: 300
 
@@ -29,6 +29,10 @@ hooks:
       timeout: 300
 
   AfterInstall:
+    - location: scripts/clean_www_after_deploy.sh
+      runas: root
+      timeout: 300
+
     - location: scripts/restart_apache.sh
       runas: root
       timeout: 300
