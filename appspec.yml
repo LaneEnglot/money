@@ -20,6 +20,10 @@ hooks:
       runas: root
       timeout: 300
 
+    - location: scripts/clean_env.sh
+      runas: root
+      timeout: 300
+
     - location: scripts/start_apache.sh
       runas: root
       timeout: 300
