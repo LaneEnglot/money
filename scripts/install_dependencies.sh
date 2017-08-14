@@ -1,3 +1,3 @@
 #!/bin/bash
-yum install -y apache2 php php-mysql
+Apt-get install -y apache2 php php-mysql
 
