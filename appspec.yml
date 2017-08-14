@@ -18,9 +18,13 @@ hooks:
   BeforeInstall:
     - location: scripts/install_dependencies.sh
       runas: root
+      timeout: 300
+
     - location: scripts/start_apache.sh
       runas: root
+      timeout: 300
 
   AfterInstall:
     - location: scripts/restart_apache.sh
       runas: root
+      timeout: 300
