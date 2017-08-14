@@ -1,0 +1,38 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html
+
+permissions:
+   - object: /var/www/html
+     pattern: "**"
+     owner: root
+     group: root
+     mode: 644
+     type:
+       - file
+
+hooks: 
+
+  BeforeInstall:
+    - location: scripts/install_dependencies.sh
+      runas: root
+      timeout: 300
+
+    - location: scripts/clean_env_before_deploy.sh
+      runas: root
+      timeout: 300
+
+    - location: scripts/start_apache.sh
+      runas: root
+      timeout: 300
+
+  AfterInstall:
+    - location: scripts/clean_www_after_deploy.sh
+      runas: root
+      timeout: 300
+
+    - location: scripts/restart_apache.sh
+      runas: root
+      timeout: 300
