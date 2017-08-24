@@ -16,10 +16,6 @@ permissions:
 hooks: 
 
   BeforeInstall:
-    - location: scripts/install_dependencies.sh
-      runas: root
-      timeout: 300
-
     - location: scripts/clean_env_before_deploy.sh
       runas: root
       timeout: 300
