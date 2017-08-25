@@ -2,7 +2,7 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /var/www/html
+    destination: /usr/local/nginx/html
 
 permissions:
    - object: /var/www/html
