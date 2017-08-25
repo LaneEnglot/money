@@ -2,10 +2,10 @@ version: 0.0
 os: linux
 files:
   - source: /
-    destination: /usr/local/nginx/html
+    destination: /var/www/html
 
 permissions:
-   - object: /usr/local/nginx/html
+   - object: /var/www/html
      pattern: "**"
      owner: root
      group: root
