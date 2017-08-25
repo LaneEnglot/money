@@ -1,7 +1,6 @@
 #!/bin/bash
-isExistApp=`pgrep apache2`
+isExistApp=`pgrep nginx`
 if [[ -n  $isExistApp ]]; then
-    service apache2 stop   
+    systemctl nginx stop   
 fi
 rm -fR /var/www/html
-

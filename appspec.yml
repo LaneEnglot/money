@@ -16,11 +16,11 @@ permissions:
 hooks: 
 
   BeforeInstall:
-    - location: scripts/clean_env_before_deploy.sh
+    - location: scripts/stop_nginx.sh
       runas: root
       timeout: 300
 
-    - location: scripts/start_apache.sh
+    - location: scripts/clean_env_before_deploy.sh
       runas: root
       timeout: 300
 
@@ -29,6 +29,6 @@ hooks:
       runas: root
       timeout: 300
 
-    - location: scripts/restart_apache.sh
+    - location: scripts/start_nginx.sh
       runas: root
       timeout: 300
