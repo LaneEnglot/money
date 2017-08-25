@@ -29,6 +29,3 @@ hooks:
       runas: root
       timeout: 300
 
-    - location: scripts/start_nginx.sh
-      runas: root
-      timeout: 300
