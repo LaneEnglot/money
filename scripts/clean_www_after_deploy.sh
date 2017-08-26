@@ -19,4 +19,5 @@ fi
 if [ -f /tmp/nginx_error.php ]; then
    mv /tmp/nginx_error.php /var/www/html/error.php
 fi
+chown -R "$USER":www-data /var/www/html
 chmod -R 755 /var/www/html
