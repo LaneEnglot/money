@@ -6,3 +6,4 @@ if [[ -n  $isExistApp ]]; then
 fi
 # clear dir contents b4 code deploy extract...
 rm -fR /var/www/html/*
+mkdir -p /var/www/html/
