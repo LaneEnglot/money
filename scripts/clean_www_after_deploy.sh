@@ -7,7 +7,8 @@ fi
 mv /var/www/html/src /tmp/web_src
 
 # clear web root
-rm -fR /var/www/html/*
+rm -fR /var/www/html/
+mkdir -p /var/www/html/
 
 # if nginx config exists move it.
 if [ -d /tmp/web_src ]; then
