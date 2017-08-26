@@ -12,7 +12,8 @@ mkdir -p /var/www/html/
 
 # if nginx config exists move it.
 if [ -d /tmp/web_src ]; then
-   mv /tmp/web_src /var/www/html
+   mv /tmp/web_src/* /var/www/html/
+   # rm -fR /tmp/web_src/
 fi
 
 # if error page exists move it.
